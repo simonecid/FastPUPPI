@@ -30,7 +30,7 @@ process.source = cms.Source("PoolSource",
         "drop l1tEMTFTrack2016s_simEmtfDigis__HLT")
 
 )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(500))
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1))
 process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
   
 
@@ -45,33 +45,7 @@ process.out = cms.OutputModule("PoolOutputModule",
             "keep *_genParticles_*_*",
             "keep *_ak4GenJetsNoNu_*_*",
             "keep *_genMetTrue_*_*",
-            # --- PF IN
-            "keep *_TTTracksFromTracklet_Level1TTTracks_*",
-            "keep *_l1EGammaCrystalsProducer_L1EGXtalClusterNoCuts_*",
-            "keep *_hgcalTriggerPrimitiveDigiProducer_cluster3D_IN",
-            "keep *_hgcalTriggerPrimitiveDigiProducer_cluster2D_IN",
-            "keep *_hgcalTriggerPrimitiveDigiProducer_calibratedTriggerCells_IN",
-            "keep *_simGmtStage2Digis__*",
-            "keep *_simHcalTriggerPrimitiveDigis__*",
-            # --- to be tested
-            "keep *_hgcalTriggerPrimitiveDigiProducer_tower_IN",
-            "keep *_hgcalTriggerPrimitiveDigiProducer_towerMap_IN",
-            # --- Stage2 ---
-            "keep *_simCaloStage2Digis_*_*",
-            # --- TK IN
-            "keep *_L1TkCaloHTMissVtx_*_*",
-            "keep *_L1TkCaloJets_*_*",
-            "keep *_L1TkElectrons_*_*",
-            "keep *_L1TkGlbMuons_*_*",
-            "keep *_L1TkIsoElectrons_*_*",
-            "keep *_L1TkMuons_*_*",
-            "keep *_L1TkPhotons_*_*",
-            "keep *_L1TkPrimaryVertex_*_*",
-            "keep *_L1TkTauFromCalo_*_*",
-            "keep *_L1TrackerEtMiss_*_*",
-            "keep *_L1TrackerHTMiss_*_*",
-            "keep *_L1TrackerJets_*_*",
-            "keep *_VertexProducer_*_*",
+            "keep *_addPileupInfo_*_*",
             # --- PF OUT
             "keep l1tPFClusters_*_*_*",
             "keep l1tPFTracks_*_*_*",
